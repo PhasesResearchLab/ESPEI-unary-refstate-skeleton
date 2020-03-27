@@ -4,8 +4,8 @@
 
 Installing this repository:
 
-* Clone it locally (`git clone https://PhasesResearchLab/ESPEI-refstate-skeleton`)
-* Install it using `pip` (adding the `-e` flag to make it editable, i.e. you change change the reference state data and it will take effect) (`cd ESPEI-refstate-skeleton` and then `pip install -e .`)
+* Clone it locally (`git clone https://PhasesResearchLab/ESPEI-unary-refstate-skeleton`)
+* Install it using `pip` (adding the `-e` flag to make it editable, i.e. you change change the reference state data and it will take effect) (`cd ESPEI-unary-refstate-skeleton` and then `pip install -e .`)
 
 Once you have done this, you'll be able to use the reference state defined by the `NAME` variable in `setup.py`, which defaults to `CustomRefstate2020` in ESPEI for parameter generation, i.e. in the following input YAML:
 
@@ -22,7 +22,7 @@ See below for how to modify this to use your own reference state!
 
 ## How to modify this repository
 
-* Clone it locally (`git clone https://PhasesResearchLab/ESPEI-refstate-skeleton`) and enter the package directory (`cd ESPEI-refstate-skeleton`). You can rename the directory if you like.
+* Clone it locally (`git clone https://PhasesResearchLab/ESPEI-unary-refstate-skeleton`) and enter the package directory (`cd ESPEI-unary-refstate-skeleton`). You can rename the directory if you like.
 * Open the `setup.py` file and change the `NAME` variable at the top of the file to your desired name. I suggest something like `Bocklund2015`. This must correspond to the names of the dictionaries in the next step.
 * Add two dictionaries to the `refstate.py` module named `<NAME>Stable` and `<NAME>` (e.g. `Bocklund2015` and `Bocklund2015`), corresponding to the energy of the stable phase at 298.15 K and the lattice stabilities, respectively, as SymPy expressions. The best way to do this is just look at what's there and modify the example. *Note that the names are case sensitive and they must be valid Python identifiers!* Python identifiers start with a letter and contain only letters, numbers and underscores.
 * Install the package as editable 

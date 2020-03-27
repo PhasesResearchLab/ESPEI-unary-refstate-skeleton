@@ -2,13 +2,12 @@ from setuptools import setup
 import os
 import versioneer
 
-NAME = 'espei_refstate_bock2015'
 
 def readme(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name=NAME,
+    name='espei_refstate_bock2015',
     version='0.1',
     cmdclass=versioneer.get_cmdclass(),
     author='<Your name>',
@@ -18,5 +17,5 @@ setup(
     license='MIT',
     py_modules=['refstate'],
     long_description=readme('README.md'),
-    entry_points={'espei.reference_states': f'{NAME}.refstate'}
+    entry_points={'espei.reference_states': 'reference_state = refstate'}
 )

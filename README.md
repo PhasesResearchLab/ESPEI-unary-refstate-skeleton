@@ -49,3 +49,17 @@ print(espei.refdata.INSERTED_USER_REFERENCE_STATES)
 If you do this after installing the unchanged package from this repository, you should find `CustomRefstate2020` is printed and the dictionaries `espei.refdata.CustomRefstate2020Stable` and `espei.refdata.CustomRefstate2020` should be defined.
 
 For more details see the `espei.refdata.find_and_insert_user_refstate` function.
+
+## Advanced usage
+
+You can name your package or set the settings any way you like, the only requirement is that the setup function contain the following `entry_points` entry:
+
+```python
+# setup.py
+
+setup(# ...
+      entry_points={'espei.reference_states': '<NAME> = <MODULE>'}
+)
+```
+
+where `<MODULE>` can be the name of any module in your package that defines a dictionary `<NAME>Stable` and a dictionary `<NAME>`.

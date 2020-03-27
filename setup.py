@@ -8,7 +8,7 @@ def readme(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name='espei_refstate_{NAME}'.lower(),
+    name=f'espei_refstate_{NAME}'.lower(),
     version='0.1',
     cmdclass=versioneer.get_cmdclass(),
     author='<Your name>',

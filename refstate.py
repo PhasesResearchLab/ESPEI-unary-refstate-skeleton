@@ -9,7 +9,7 @@ from collections import OrderedDict
 
 # These are truncated versions of SGTE91. They are not correct and just here for an example.
 # These functions form GHSER<ELEMENT> names, e.g. GHERAG and GHSERAL, which are used in the lattice stabilities later.
-BOCK2015Stable = OrderedDict(
+CustomRefstate2020Stable = OrderedDict(
 [('AG',
   Piecewise((-7209.512 + 118.202013*T, And(T < 1234.93, T >= 298.15)), (-15095.252 + 190.266404*T, And(T < 3000.0, T >= 1234.93)), evaluate=False)),
  ('AL',
@@ -23,7 +23,7 @@ BOCK2015Stable = OrderedDict(
 # A.T. Dinsdale, SGTE data for pure elements, Calphad, Volume 15, Issue 4, 1991, Pages 317-425, ISSN 0364-5916,
 # http://dx.doi.org/10.1016/0364-5916(91)90030-N.
 # http://www.sciencedirect.com/science/article/pii/036459169190030N
-BOCK2015 = OrderedDict(
+CustomRefstate2020 = OrderedDict(
 [(('AG', 'BCC_A2'), Piecewise((3400 - 1.05*T + Symbol('GHSERAG'), And(T < 3000.0, T >= 298.15)), evaluate=False)),
  (('AG', 'CUB_A13'), Piecewise((3765.6 - 1.8826*T + Symbol('GHSERAG'), And(T < 3000.0, T >= 298.15)), evaluate=False)),
  (('AG', 'FCC_A1'), Piecewise((Symbol('GHSERAG'), And(T < 3000.0, T >= 298.15)), evaluate=False)),

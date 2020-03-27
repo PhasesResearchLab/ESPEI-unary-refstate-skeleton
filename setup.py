@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 import versioneer
 
-NAME = 'BOCK2015'
+NAME = 'CustomRefstate2020'
 
 def readme(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()

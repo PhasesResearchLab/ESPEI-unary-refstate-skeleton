@@ -11,8 +11,8 @@ Installing this repository
 ## How to modify this repository
 
 * Clone it locally (`git clone https://PhasesResearchLab/ESPEI-refstate-skeleton`)
-* Open the `setup.py` file and change the `NAME` variable at the top of the file to your desired name. I suggest something like `espei_refstate_<name>`, for example `espei_refstate_bock2015` if your reference state will be called `BOCK2015`
-* Add two dictionaries to the `refstate.py` module named `BOCK2015Stable` and `BOCK2015`, corresponding to the energy of the stable phase at 298.15 K and the lattice stabilities, respectively, as SymPy expressions. The best way to do this is just look at what's there and modify the example.
+* Open the `setup.py` file and change the `NAME` variable at the top of the file to your desired name. I suggest something like `BOCK2015`. This must correspond to the names of the dictionaries in the next step.
+* Add two dictionaries to the `refstate.py` module named `<name>Stable` and `<name>` (e.g. `BOCK2015Stable` and `BOCK2015`), corresponding to the energy of the stable phase at 298.15 K and the lattice stabilities, respectively, as SymPy expressions. The best way to do this is just look at what's there and modify the example. *Note that the names are case sensitive!*
 
 ## Background
 

@@ -1,6 +1,5 @@
 from setuptools import setup
 import os
-import versioneer
 
 NAME = 'CustomRefstate2020'
 
@@ -10,7 +9,6 @@ def readme(fname):
 setup(
     name=f'espei_refstate_{NAME}'.lower(),
     version='0.1',
-    cmdclass=versioneer.get_cmdclass(),
     author='<Your name>',
     author_email='you@example.com',
     url='https://your-refstate.example.com',
